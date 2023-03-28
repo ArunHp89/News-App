@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@-webkit-keyframes moving-gradient {
+    0% {
+        background-position: -250px 0;
+      }
+      100% {
+        background-position: 250px 0;
+      }
+}
+
+.loading figure {
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+            background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+          background-size: 500px 100px;
+}
+
+.loading P {
+    height: 24px;
+    width: 100%;
+    
+
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+            background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+          background-size: 500px 100px;
+}
+
+.loading h2 {
+    height: 56px;
+
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+            background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+          background-size: 500px 100px;
+}
+
+.loading p.text-base.text-black.line-clamp-4 {
+    height: 96px;
+
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+            background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+          background-size: 500px 100px;
+}
+
+.loading a {
+    HEIGHT: 32PX;
+    width: 117PX;
+    border-radius: 50px;
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+            background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+          background-size: 500px 100px;
+}
+ figure::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background:#1d4ed840;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+figure img{
+    transition: 1s !important;
+}
+ figure:hover::before {
+    -webkit-animation: circle 1s infinite;
+    animation: circle .75s;
+}
+figure:hover img {
+transform:  scale(1.5);
+}
+figure {
+    position: relative;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
