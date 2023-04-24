@@ -16,7 +16,7 @@ export default function News() {
 <div className='flex flex-wrap'>
 <div className='flex flex-wrap w-4/6'>
 
-  {newData!==undefined? (newData?.articles.map((item , i )=>{
+  {newData!==undefined? (newData?.articles?.map((item , i )=>{
     return(<div key={i} className='w-1/3 px-4 my-4 flex'>
       <div className='border'>
   {item?.urlToImage===null?(<div className='h-40 w-full flex justify-center items-center bg-gray-400'><marquee>No Image</marquee></div>):  <figure className='overflow-hidden
